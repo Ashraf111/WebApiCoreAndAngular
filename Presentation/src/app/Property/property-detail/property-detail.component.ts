@@ -7,8 +7,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./property-detail.component.css']
 })
 export class PropertyDetailComponent implements OnInit {
-public propertyid: number=0;
-  constructor( private route: ActivatedRoute,private router:Router) { }
+public propertyid: number;
+  constructor( private route: ActivatedRoute,private router:Router) {
+    this.propertyid=0
+  }
 
   ngOnInit() {
     this.propertyid=Number(this.route.snapshot.params['id']);
